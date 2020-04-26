@@ -1,0 +1,104 @@
+<!--
+  <div class="login-box">
+        <h1>S'authentifier </h1>
+        <div class="textbox">
+            <i class="fas fa-user"></i>
+            <input type="text"  placeholder="N° de compte" [(ngModel)]="compte" name="" value="">
+        </div>
+    
+        <div class="textbox">
+            <i class="fas fa-lock"></i>
+            <input type="password" placeholder="Mot de passe" [(ngModel)]="password" name="" value="">
+        </div>
+    
+        <div>
+             <button mat-button  >Mot de passe oublié </button>
+        </div>
+        <div>
+            <button class="btn" type="submit" (click)="onClick()" name="" value="se connecter">
+              <li routerLinkActive="active">
+                 <a routerLink="home">se connecter</a>
+              </li>
+            </button>
+        </div>
+    
+        <div>
+            <button class="btn" type="submit"  name="" value="s'inscrire">
+                <li routerLinkActive="active">
+                     <a routerLink="inscription">s'inscrire</a>
+                </li>
+            </button>
+        </div>
+    
+        <p  class="message" [(ngModel)]="msg" >
+                {{ msg }}
+        </p>
+    
+    </div>
+     <div>
+            <button class="btn" type="submit"  name="" value="nouveau client">
+              <li routerLinkActive="active">
+                 <a routerLink="/inscription">Sign Up</a>
+              </li>
+            </button>
+        </div>
+      
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>S'authentifier</title>
+        <meta charset="UTF 8">
+    </head>
+
+<body class="bg">
+<div class="container">
+    
+  <div class="left">
+    <h1 class="title"> <i class="fas fa-coins">EMBank</i> <br /> </h1>
+      <br /><br />
+    
+   
+    
+</div>
+<div class="right">
+    <div class="pt">
+            <li  >
+                <a href="../../form-inscription/form-inscription.component.html" class="btnvv">New to internet banking ?</a>
+             </li>
+    </div>
+    
+        <div class="textbox">
+            <i class="fas fa-user"></i>
+            <input type="text"  placeholder="Account Number" [(ngModel)]="compte" name="" value="">
+        </div>
+    
+        <div class="textbox">
+            <i class="fas fa-lock"></i>
+            <input type="password" placeholder="Password" [(ngModel)]="password" name="" value="">
+        </div>
+    
+        <div>
+            <button class="btn" type="submit" (click)="onClick()" name="" value="se connecter" routerLinkActive="active">
+                 <a href="/client-app/src/app/home" class="btnvv">Sign in</a>
+            </button>
+        </div>
+      
+      
+        <div class="form-row d-flex flex-row justify-content-between">
+            <div class="col align-self-end">
+              <span class="float-right pb-2">
+                <a href="/client-app/src/app/forgot/forgot.component.html" class=" btnvv">
+                  Forgot Password?
+                </a>
+              </span>
+            </div>
+          </div>
+        <p  class="message" [(ngModel)]="msg" >
+                {{ msg }}
+        </p>
+    
+</div>
+</div>
+</body>
+</html>

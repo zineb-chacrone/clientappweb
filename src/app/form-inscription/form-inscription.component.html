@@ -1,0 +1,126 @@
+<!--<div class="row">
+    <div class="col s8 offset-s2">
+       <div class="card">
+           <div class="sm-jumbotron center-align">
+               <h2>Devenir un Client :</h2>
+            </div>
+            <form action="" class="col s12 white" #DevenirUnClientForm="ngForm" autocomplete="off">
+                <h4>Les Informations Personnelles</h4>
+                <div class="row">
+                    <div class="input-field col s6 centreVerticalement">
+                        <input type="text" name="Nom" #Nom="ngModel" [(ngModel)]="user.Nom" class="validate" required>
+                        <label data-error="Champs Obligatoire!">Nom</label>
+                    </div>
+                    <div class="input-field col s6  centreVerticalement">
+                        <input type="text" name="Prenom" #Prenom="ngModel" [(ngModel)]="user.Prenom" class="validate" required>
+                        <label data-error="Champs Obligatoire!">Prénom</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6   centreVerticalement">
+                        <input type="text" name="Cin" #Cin="ngModel" [(ngModel)]="user.Cin" class="validate" required>
+                        <label data-error="Champs Obligatoire!">CIN</label>
+                    </div>
+                   
+                </div>
+                <div class="row">
+                        <div class="input-field col s6   centreVerticalement">
+
+                    <input type="text" name="Adresse" #Adresse="ngModel" [(ngModel)]="user.Adresse" class="validate" required>
+                    <label data-error="Champs Obligatoire!">Adresse</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6   centreVerticalement">
+                        <input type="radio" name="Monsieur"  required>
+                        <label data-error="Champs obligatoire!">Monsieur</label>
+                    </div>
+                    <div class="input-field col s6    centreVerticalement">
+                        <input type="radio" name="Madame"  required>
+                        <label data-error="Champs obligatoire!">Madame</label>
+                    </div>
+                    <div class="input-field col s6   centreVerticalement">
+                        <input type="radio" name="Mademoiselle"  required>
+                        <label data-error="Champs obligatoire!">Mademoiselle</label>
+                    </div>
+                </div>
+                <h4>Les Coordonnées Personnelles</h4>
+                <div class="row">
+                    <div class="input-field col s6   centreVerticalement">
+                        <input type="tel" name="Mobile" #Mobile="ngModel" [(ngModel)]="user.Mobile" class="validate" required>
+                        <label data-error="Champs Obligatoire!">Mobile</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6   centreVerticalement">
+                        <input type="text" name="Email" #Email="ngModel" [(ngModel)]="user.Email" [pattern]="emailPattern">
+                        <label data-error="Email invalide!">Email</label>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="input-field col s6   centreVerticalement">
+                        <button class="btn-large btn-submit" type="submit" >S'inscrire</button>
+                        
+                    </div>
+
+                </div>
+                    
+            </form>
+       </div> 
+    </div>
+</div>
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Nouveau Ct</title>
+        <meta charset="UTF 8">
+    </head>
+
+<body class="bg">
+<div class="box">
+    <div class="left">
+        <h1 class="title"><i class="fas fa-coins">EMBank</i> <br /></h1>
+
+    </div>
+    <div class="right">
+<form [formGroup]="signupForm" (ngSubmit)="signup()">
+    <h1>S'inscrire</h1>
+    <hr>
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder=" Nom" formControlName="Nom" >
+        <label data-error="Champs Obligatoire!"></label>
+    </div>
+    <div class="form-group">
+           
+            <input type="text" class="form-control" placeholder=" Prénom" formControlName="Prenom" >
+            <label data-error="Champs Obligatoire!"></label>
+    </div>
+    <div class="form-group">
+            <input type="email" class="form-control" placeholder=" Email" formControlName="email">
+            <label data-error="Champs Obligatoire!"></label>
+    </div>
+    <div class="form-group">
+          
+            <input type="number" class="form-control" placeholder="Numéro du compte" formControlName="numcompt">
+            <label data-error="Champs Obligatoire!"></label>
+    </div>
+    <div class="form-group">
+        <input type="text" onfocus="(this.type='date')"  onblur="(this.type='text')" class="form-control" placeholder="date de naissance" formControlName="datedenai">
+        <label data-error="Champs Obligatoire!"></label>
+    </div>
+    <div class="form-group">
+                    <input type="number" class="form-control" placeholder="Numéro Telephone" formControlName="numtel">
+                    <label data-error="Champs Obligatoire!"></label>
+                </div>
+    <div class="form-group">
+                        <input type="password" class="form-control" placeholder="Mot de passe" formControlName="password">
+                        <label data-error="Champs Obligatoire!"></label>
+                </div>
+    <button type="submit" class="btn">Terminer</button>
+</form>
+</div>
+</div>
+</body>
+</html>

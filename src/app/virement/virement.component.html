@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Virement Formu</title>
+    </head>
+<body class="bk">
+    <h1>Virement Fomulaire</h1>
+    <form class="box">
+        <div class="form-group">
+            <input type="number" class="form-control" placeholder=" Numéro de compte du bénéficiaire" formControlName="numben" >
+            <label data-error="Champs Obligatoire!"></label>
+        </div>
+        <div class="form-group">
+               
+                <input type="text" class="form-control" placeholder=" Nom du bénéficiaire" formControlName="nomben" >
+                <label data-error="Champs Obligatoire!"></label>
+        </div>
+        <div class="form-group">
+                <input type="number" class="form-control" placeholder=" Numéro de compte d'emetteur" formControlName="numem">
+                <label data-error="Champs Obligatoire!"></label>
+        </div>
+        <div class="form-group">
+              
+                <input type="number" class="form-control" placeholder="Montant" formControlName="montant">
+                <label data-error="Champs Obligatoire!"></label>
+        </div>
+        <button type="submit" class="btn">Effectuer</button>
+    </form>
+</body>
+</html>

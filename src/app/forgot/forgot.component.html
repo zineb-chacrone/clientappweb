@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mot de passe oublié ?</title>
+        <meta charset="UTF 8">
+    </head>
+
+<body class="bg">
+<div class="bgforg">
+    <h4 style="color: rgb(17, 5, 71)">nous allons vous  envoyer un nouveau mot de passe </h4>
+    <div class="textbox">
+        <i class="fas fa-user"></i>
+        <input type="text"  placeholder="Account Number" [(ngModel)]="compte" name="" value="">
+    </div>
+
+    <div class="textbox">
+        <i class="fas fa-phone"></i>
+        <input type="password" placeholder="Numéro de telephone" [(ngModel)]="tel" name="" value="">
+    </div>
+
+    <div>
+        <button class="btn" type="submit" (click)="onClick()" name="" value="envoyer" >
+            <a>envoyer</a>
+             
+        </button>
+    </div>
+   
+</div>

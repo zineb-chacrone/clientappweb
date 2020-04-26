@@ -1,0 +1,49 @@
+
+
+.box{
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50%;
+    padding: 20px 30px;
+    margin-top:200px;
+    color: goldenrod;
+    
+
+}
+.fox{
+    text-transform: uppercase;
+    margin-left: 39%;
+    font-size: 50px;
+   
+}
+.hr_header{
+    width: 20%;
+}
+.need{
+    text-transform: uppercase;
+    margin-left: 36.8%;
+    font-size: 27px;
+    color: black;
+    
+}
+.visit{
+    text-transform: uppercase;
+    margin-left: 34%;
+    font-size: 32px;
+    padding: 10px;
+    
+    width:1000px;
+}
+.contact_num_txt{
+    margin-left:10%;
+    line-height: 10px;
+    font-size: 40px;
+    margin-top: 50%;
+    padding: 10px;
+
+}
+strong{
+   margin-left:5%;
+}
