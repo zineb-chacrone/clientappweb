@@ -52,19 +52,13 @@
     </head>
 
 <body class="bg">
-<div class="container">
-    
-  <div class="left">
-    <h1 class="title"> <i class="fas fa-coins">EMBank</i> <br /> </h1>
-      <br /><br />
-    
-   
-    
-</div>
-<div class="right">
-    <div class="pt">
+
+    <div class="left"><i class="fas fa-coins">EMBank</i></div>
+    <div class="right">
+
+    <div class="pt-2">
             <li  >
-                <a href="../../form-inscription/form-inscription.component.html" class="btnvv">New to internet banking ?</a>
+                <a class="btnvv" (click)="gotoform()">New to internet banking ?</a>
              </li>
     </div>
     
@@ -80,15 +74,15 @@
     
         <div>
             <button class="btn" type="submit" (click)="onClick()" name="" value="se connecter" routerLinkActive="active">
-                 <a href="/client-app/src/app/home" class="btnvv">Sign in</a>
+                 <a  class="btnvv">Sign in</a>
             </button>
         </div>
-      
+       
       
         <div class="form-row d-flex flex-row justify-content-between">
             <div class="col align-self-end">
               <span class="float-right pb-2">
-                <a href="/client-app/src/app/forgot/forgot.component.html" class=" btnvv">
+                <a class=" btnvv" (click)="gotoforgot()">
                   Forgot Password?
                 </a>
               </span>
@@ -97,8 +91,7 @@
         <p  class="message" [(ngModel)]="msg" >
                 {{ msg }}
         </p>
+    </div>
     
-</div>
-</div>
 </body>
 </html>

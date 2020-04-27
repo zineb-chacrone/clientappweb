@@ -1,32 +1,55 @@
-<!DOCTYPE html>
+<!--<table class="table table-bordered bg1">
+        <thead >
+          <tr>
+            <th scope="col">#</th>
+          
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+           
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+           
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+           
+          </tr>
+        </tbody>
+      </table>-->
+      <!DOCTYPE html>
 <html>
     <head>
-        <title>Solde Form</title>
+        <title>nouveau Client</title>
+        <meta charset="UTF 8">
     </head>
-<body>
-    <div class="contact-form">
-        
-       <div class="txtb">
-          
-           <select name="compte" id="compte">
-             <option selected disabled>Séléctionner votre compte</option>
-             <option value="c1">C1</option>
-             <option value="c2">C2</option>
-             <option value="c3">C3</option>
-           </select>
 
-       </div>
+<body class="bg">
+<div class="box">
+ 
+  
+    <div class="select">
+      <select name="compte" id="compte">
+        <option selected disabled>Séléctionner votre compte</option>
+        <option value="c1">C1</option>
+        <option value="c2">C2</option>
+        <option value="c3">C3</option>
 
-       <div class="txtb">
-        <label>Votre solde est :</label>
-        <input  name="number"  >
-        
-       </div>
-       <button class="btn" type="submit" > Voir le relevé</button>
-      
+     
+      </select>
     </div>
-    <div class="back">
-        <button class="btn" type="submit" routerLink="/client" routerLinkActive="active">Précédent</button>
-    </div>
-    
+    <div class="form-group">
+      <!--date du jour-->
+        <input type="string" class="form-control" [value]='msg' >
+      </div>   
+    <div class="form-group">
+      <!--solde-->
+        <input type="number" class="form-control" [value]='solde' >
+</div> 
+
+</div>
 </body>
+</html>

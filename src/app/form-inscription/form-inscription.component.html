@@ -74,20 +74,16 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Nouveau Ct</title>
+        <title>nouveau Client</title>
         <meta charset="UTF 8">
     </head>
 
 <body class="bg">
-<div class="box">
-    <div class="left">
-        <h1 class="title"><i class="fas fa-coins">EMBank</i> <br /></h1>
 
-    </div>
-    <div class="right">
+    <div class="left"><i class="fas fa-coins">EMBank</i></div>
+    <div class="box">
+        <h2>S'INSCRIRE</h2>
 <form [formGroup]="signupForm" (ngSubmit)="signup()">
-    <h1>S'inscrire</h1>
-    <hr>
     <div class="form-group">
         <input type="text" class="form-control" placeholder=" Nom" formControlName="Nom" >
         <label data-error="Champs Obligatoire!"></label>
@@ -118,9 +114,8 @@
                         <input type="password" class="form-control" placeholder="Mot de passe" formControlName="password">
                         <label data-error="Champs Obligatoire!"></label>
                 </div>
-    <button type="submit" class="btn">Terminer</button>
+    <button type="submit" class="btn" (click)="gotologin()">Terminer</button>
 </form>
-</div>
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+/*
 .page-container{
   height: 90%;
   
@@ -83,4 +84,81 @@ h1{
   margin-left:300px;
   background-color: black;
   height:100%;
+}
+*/
+
+h2{
+  color:goldenrod;
+  margin-top:50px;
+  margin-left:-5px;
+  font-size: 150%;
+  
+ 
+}
+
+.sidenav-container {
+  height: 100%;
+  background: none;
+}
+.fo9{
+  background: none;
+
+}
+.ss{
+  width: 0,2%;
+  
+  height: 0.1%;
+}
+.listXd{
+  background-color: grey;
+  color: goldenrod;
+  padding:10px;
+  height:400px;
+  margin-top: 100px;
+  
+}
+.itm{
+  color:goldenrod;
+  font-size: 100%;
+}
+.itm:hover{
+  color:rgb(185, 174, 174);
+  
+}
+.itm.selected{
+  background: grey;
+}
+
+.itm::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 3px;
+  background-color: orange;
+  opacity: 0;
+  transform:scaleY(0) ;
+  transition: transform 0.2s, opacity 0.2s;
+}
+.itm:hover::before{
+  opacity: 1;
+  transform: scaleY(1);
+}
+
+
+.sidenav {
+  
+  width: 230px;
+  background: grey;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }

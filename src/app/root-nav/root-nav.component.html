@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>nouveau Client</title>
+        <meta charset="UTF 8">
+    </head>
+
+<body class="bg">
+    <router-outlet></router-outlet>
+    
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav"  fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <mat-toolbar class="xd">
+    <h2>
+        <i class="fas fa-coins">EMBank</i>
+    </h2>
+    </mat-toolbar>
+    
+    <mat-nav-list class="listXd">
+      <a mat-list-item  href="client/compte" class="itm">
+          <i class="far fa-credit-card"> Mes Comptes</i>
+           
+      </a>
+      <hr>
+      <a mat-list-item  href="client/solde" class="itm">
+          <i class="fas fa-donate">   Mon Solde</i>  
+      </a>
+      <hr>
+      <a mat-list-item href="client/trans" class="itm">
+          <i class="fas fa-archive">
+              Mes Transactions 
+          </i>  
+      </a>
+      <hr>
+      <a mat-list-item href="client/virement" class="itm"><i class="fas fa-exchange-alt">  Effectuer un Virement</i></a>
+      <hr>
+      <a mat-list-item href="client/contact" class="itm">
+          <i class="fas fa-comments">
+              Contacter
+          </i>
+      </a>
+      <hr>
+      <a mat-list-item href="/discon" class="itm">
+          <i class="fas fa-power-off">  Deconnexion </i>  
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar class="fo9">
+      
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span></span>
+    </mat-toolbar>
+  
+  </mat-sidenav-content>
+</mat-sidenav-container>
+</body>
+</html>

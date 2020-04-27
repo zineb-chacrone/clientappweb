@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { getLocaleDateFormat } from '@angular/common';
+import { lavender } from 'color-name';
 
 @Component({
   selector: 'app-solde',
@@ -6,10 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./solde.component.css']
 })
 export class SoldeComponent implements OnInit {
-
-  constructor() { }
-
+ladate =new Date();
+msg=""+ this.ladate.getDate()  + "-" + this.ladate.getMonth() + "-" + this.ladate.getFullYear() ;
+num="";
+nom="";
+solde=0;
   ngOnInit(): void {
+    console.log(this.ladate);
   }
 
 }

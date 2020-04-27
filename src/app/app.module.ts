@@ -15,17 +15,15 @@ import{MatToolbarModule} from '@angular/material/toolbar';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import{MatIconModule}from '@angular/material/icon';
 import{MatListModule} from '@angular/material/list';
-
+import { RootNavComponent } from './root-nav/root-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import {ReactiveFormsModule} from '@angular/forms';
 import { ForgotComponent } from './forgot/forgot.component';
 import { SoldeComponent } from './solde/solde.component';
+import { CompteComponent } from './compte/compte.component';
 import { VirementComponent } from './virement/virement.component';
+import { TransactionComponent } from './transaction/transaction.component';
 import { ContactComponent } from './contact/contact.component';
-
-import { MenuNavComponent } from './menu-nav/menu-nav.component';
-import { ComptesComponent } from './comptes/comptes.component';
-import { TransactionsComponent } from './transactions/transactions.component';
 const routes: Routes = [ 
   {path: 'solde' , component: SoldeComponent},
   {path: 'login' , component: LoginComponent},
@@ -39,15 +37,13 @@ const routes: Routes = [
     ClientSpaceComponent,
     FormInscriptionComponent,
     LoginComponent,
-    
+    RootNavComponent,
     ForgotComponent,
     SoldeComponent,
+    CompteComponent,
     VirementComponent,
+    TransactionComponent,
     ContactComponent,
-    
-    MenuNavComponent,
-    ComptesComponent,
-    TransactionsComponent,
     
    
   ],

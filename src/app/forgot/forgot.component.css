@@ -1,17 +1,27 @@
-.bg{
-    background-image: url(../../assets/images/img2.PNG);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
+
 .bgforg{
     width: 500px;
     height: 450px;
     position: absolute;
     top: 40%;
-    left:17%;
+    left:75%;
     transform: translate(-50%,-50%);
     padding: 50px 60px;
+    border:2px solid goldenrod;
        
+}
+.bgforg h4{
+    font-size:20px;
+    color:goldenrod;
+}
+.right{
+    color:goldenrod;
+    margin-top:15%;
+    margin-left:10%;
+    
+}
+h1{
+    font-size: 120px;
 }
 .btn{
     width: 50%;
