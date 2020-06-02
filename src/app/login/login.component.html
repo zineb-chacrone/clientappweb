@@ -1,49 +1,4 @@
-<!--
-  <div class="login-box">
-        <h1>S'authentifier </h1>
-        <div class="textbox">
-            <i class="fas fa-user"></i>
-            <input type="text"  placeholder="N° de compte" [(ngModel)]="compte" name="" value="">
-        </div>
-    
-        <div class="textbox">
-            <i class="fas fa-lock"></i>
-            <input type="password" placeholder="Mot de passe" [(ngModel)]="password" name="" value="">
-        </div>
-    
-        <div>
-             <button mat-button  >Mot de passe oublié </button>
-        </div>
-        <div>
-            <button class="btn" type="submit" (click)="onClick()" name="" value="se connecter">
-              <li routerLinkActive="active">
-                 <a routerLink="home">se connecter</a>
-              </li>
-            </button>
-        </div>
-    
-        <div>
-            <button class="btn" type="submit"  name="" value="s'inscrire">
-                <li routerLinkActive="active">
-                     <a routerLink="inscription">s'inscrire</a>
-                </li>
-            </button>
-        </div>
-    
-        <p  class="message" [(ngModel)]="msg" >
-                {{ msg }}
-        </p>
-    
-    </div>
-     <div>
-            <button class="btn" type="submit"  name="" value="nouveau client">
-              <li routerLinkActive="active">
-                 <a routerLink="/inscription">Sign Up</a>
-              </li>
-            </button>
-        </div>
-      
--->
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -63,8 +18,8 @@
     </div>
     
         <div class="textbox">
-            <i class="fas fa-user"></i>
-            <input type="text"  placeholder="Account Number" [(ngModel)]="compte" name="" value="">
+            <i class="far fa-credit-card"></i>
+                        <input type="text"  placeholder="Account Number" [(ngModel)]="compte" name="" value="">
         </div>
     
         <div class="textbox">

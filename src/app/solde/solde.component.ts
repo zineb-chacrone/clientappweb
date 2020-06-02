@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { getLocaleDateFormat } from '@angular/common';
 import { lavender } from 'color-name';
+import { Compte } from '../compte.model';
 
 @Component({
   selector: 'app-solde',
@@ -8,13 +9,24 @@ import { lavender } from 'color-name';
   styleUrls: ['./solde.component.css']
 })
 export class SoldeComponent implements OnInit {
-ladate =new Date();
-msg=""+ this.ladate.getDate()  + "-" + this.ladate.getMonth() + "-" + this.ladate.getFullYear() ;
-num="";
-nom="";
-solde=0;
+  acount: Compte[] =[
+    {id:4512345 , solde: '30000 Dh'},
+    {id:6758940 ,solde:'12300 Dh'},
+    {id:1945630 ,solde:'56300 Dh'}
+
+  ];
+  compte: Compte;
+  sold: string="";
+  todayDate : Date = new Date();
+
   ngOnInit(): void {
-    console.log(this.ladate);
+    
+  }
+
+  showPrice(value)
+  {
+    console.log(value);
+    this.sold=value;
   }
 
 }

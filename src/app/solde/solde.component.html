@@ -1,25 +1,4 @@
-<!--<table class="table table-bordered bg1">
-        <thead >
-          <tr>
-            <th scope="col">#</th>
-          
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-           
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-           
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-           
-          </tr>
-        </tbody>
-      </table>-->
+
       <!DOCTYPE html>
 <html>
     <head>
@@ -30,26 +9,34 @@
 <body class="bg">
 <div class="box">
  
-  
+    <div class="form-group">
+        <!--date du jour-->
+        <h1>
+        <p>
+              Le:  {{todayDate | date:'short'}} 
+        </p>
+        </h1>
+    </div>   
     <div class="select">
-      <select name="compte" id="compte">
-        <option selected disabled>Séléctionner votre compte</option>
-        <option value="c1">C1</option>
-        <option value="c2">C2</option>
-        <option value="c3">C3</option>
+      <label>
+        <h3>
+            Séléctionner Un Compte:<br>
+        </h3>
+      </label>
 
-     
-      </select>
+        <select name="compte" id="compte" [(ngModel)]="compte" (change)="showPrice($event.target.value)">
+            <option *ngFor="let cmp of acount" [value]="cmp.solde" >
+                {{cmp.id}}
+            </option>    
+          </select>
     </div>
-    <div class="form-group">
-      <!--date du jour-->
-        <input type="string" class="form-control" [value]='msg' >
-      </div>   
-    <div class="form-group">
-      <!--solde-->
-        <input type="number" class="form-control" [value]='solde' >
-</div> 
-
-</div>
+    <div><br />
+      <h2>
+        le solde de votre compte est : {{sold}}
+      </h2>
+    </div>
+    
+    
+  </div> 
 </body>
 </html>

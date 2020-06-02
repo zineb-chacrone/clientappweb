@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule} from '@angular/material/button';
-import { ClientSpaceComponent } from './client-space/client-space.component';
 import {FormsModule} from '@angular/forms'
 import {RouterModule,Routes}from '@angular/router'
 import { from } from 'rxjs';
@@ -24,17 +23,15 @@ import { CompteComponent } from './compte/compte.component';
 import { VirementComponent } from './virement/virement.component';
 import { TransactionComponent } from './transaction/transaction.component';
 import { ContactComponent } from './contact/contact.component';
-const routes: Routes = [ 
-  {path: 'solde' , component: SoldeComponent},
-  {path: 'login' , component: LoginComponent},
-  {path: 'inscription' , component: FormInscriptionComponent},
-  {path: '' ,redirectTo: '/accueil' ,pathMatch:'full'},
-];
+import { MesTransactionComponent } from './mes-transaction/mes-transaction.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+import { MonCompteComponent } from './mon-compte/mon-compte.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ClientSpaceComponent,
     FormInscriptionComponent,
     LoginComponent,
     RootNavComponent,
@@ -44,6 +41,8 @@ const routes: Routes = [
     VirementComponent,
     TransactionComponent,
     ContactComponent,
+    MesTransactionComponent,
+    MonCompteComponent,
     
    
   ],
@@ -53,14 +52,16 @@ const routes: Routes = [
     AppRoutingModule,
     MatButtonModule,
     FormsModule,
-    RouterModule.forRoot(routes),
     BrowserAnimationsModule,
     MatIconModule,
     MatListModule,
     MatSidenavModule,
     MatToolbarModule,
     ReactiveFormsModule,
-    LayoutModule
+    LayoutModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
   
   providers: [],

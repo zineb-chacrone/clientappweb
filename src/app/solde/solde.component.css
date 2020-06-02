@@ -2,15 +2,19 @@
     background: none;
 }
 .box{
+
     width: 500px;
     position: absolute;
     top: 50%;
-    left: 40%;
+    left: 50%;
     transform: translate(-50%,-50%);
     color:  rgb(17, 5, 71);
     border:2px solid goldenrod;
     padding: 10px 20px;
     height: 250px;
+  }
+  select{
+      width: 25;
   }
    .form-control{
     border-color:  rgb(17, 5, 71);
@@ -31,4 +35,8 @@
        margin-left:10px;
        margin-top: 10px;
        width:250px;
+   }
+
+   .select select{
+       width: 200px;
    }
