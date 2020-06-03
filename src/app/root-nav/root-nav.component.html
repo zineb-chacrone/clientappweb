@@ -6,6 +6,34 @@
     </head>
 
 <body class="bg">
+  <div class="tt" *ngIf="position ==='/client' ">
+      <div class="image1">
+          <img src="../../assets/images/embankCarte.jpeg " class="imageedit" />
+        </div>
+    
+          <div class="text">
+             
+              <h3>
+                  Client(e) : {{ Nom }} <br />
+                  <br />
+              
+                  
+                  &emsp;   Adresse Email : {{ email }}<br /> 
+                  <br />
+                  &emsp;   Téléphone : {{ numtel }}
+                  <br />
+                  <br />
+                   Carte d'Identité Nationale : {{ cin }} <br/>
+                   <br />
+                   Ajouté(e) le : {{ datedajout }}  <br />
+                   <br />
+                  
+                      </h3>  
+    
+                  </div>
+  </div>
+  
+  
     <router-outlet></router-outlet>
     
 <mat-sidenav-container class="sidenav-container">
@@ -17,6 +45,8 @@
     <h2>
         <i class="fas fa-coins">EMBank</i>
     </h2>
+    
+
     </mat-toolbar>
     
     <mat-nav-list class="listXd">
