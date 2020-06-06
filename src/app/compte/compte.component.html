@@ -1,0 +1,29 @@
+<div class="comptes">
+   
+    <h1>Mes Comptes</h1>
+     <hr>
+     <h4>
+         {{todayDate | date:'short'}} 
+     </h4>
+     
+     <table id="cpts">
+         <tr>
+             <th *ngFor = "let column of headers">
+                 {{column}}
+     
+             </th>
+         </tr>
+     
+         <tr *ngFor = "let row of rows">
+             <td *ngFor = "let column of headers">
+               {{row[column]}}
+     
+             </td>
+            
+         </tr>
+ 
+         
+        
+     </table>
+     
+     </div>

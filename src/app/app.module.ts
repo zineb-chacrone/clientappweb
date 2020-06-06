@@ -23,11 +23,10 @@ import { CompteComponent } from './compte/compte.component';
 import { VirementComponent } from './virement/virement.component';
 import { TransactionComponent } from './transaction/transaction.component';
 import { ContactComponent } from './contact/contact.component';
-import { MesTransactionComponent } from './mes-transaction/mes-transaction.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
-import { MonCompteComponent } from './mon-compte/mon-compte.component';
+
 
 @NgModule({
   declarations: [
@@ -41,8 +40,7 @@ import { MonCompteComponent } from './mon-compte/mon-compte.component';
     VirementComponent,
     TransactionComponent,
     ContactComponent,
-    MesTransactionComponent,
-    MonCompteComponent,
+   
     
    
   ],

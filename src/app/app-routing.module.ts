@@ -10,8 +10,7 @@ import { CompteComponent } from './compte/compte.component';
 import { VirementComponent } from './virement/virement.component';
 import { TransactionComponent } from './transaction/transaction.component';
 import { ContactComponent } from './contact/contact.component';
-import { MesTransactionComponent } from './mes-transaction/mes-transaction.component';
-import { MonCompteComponent } from './mon-compte/mon-compte.component';
+
 
 const routes: Routes = [ 
   {path: 'login' , component: LoginComponent},
@@ -23,10 +22,10 @@ const routes: Routes = [
    children:[
   {path:'contact' , component:ContactComponent},
   {path: 'solde' , component: SoldeComponent},
-  {path:'compte', component: MonCompteComponent},
+  {path:'compte', component: CompteComponent},
   {path:'virement', component: VirementComponent},
   {path:'discon', redirectTo:'/login',pathMatch:'full'},
-  {path:'trans',component:MesTransactionComponent},
+  {path:'trans',component:TransactionComponent},
 ]}
 ];
 
