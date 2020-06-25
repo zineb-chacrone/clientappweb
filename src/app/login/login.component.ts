@@ -20,8 +20,8 @@ export class LoginComponent implements OnInit {
     if(this.password =="" ){
       this.msg="veuillez remplire tous les champs"
     }else{
-        if(this.compte.length!=7){
-      this.msg="veuillez entrer les 7 premiers chiffre de votre numero de compte"
+        if(this.compte.length==0){
+      this.msg="veuillez entrer votre nom "
     }else{
     console.log(this.compte,this.password);
     this.router.navigate(['/client']);

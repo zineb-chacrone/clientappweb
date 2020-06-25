@@ -17,14 +17,13 @@ const routes: Routes = [
   {path: 'forgot',component: ForgotComponent},
   {path: 'inscription' , component: FormInscriptionComponent},
   {path: '' ,redirectTo: '/login' ,pathMatch:'full'},
-  
+  {path:'discon', redirectTo:'/login',pathMatch:'full'},
   {path:'client' , component: RootNavComponent,
    children:[
   {path:'contact' , component:ContactComponent},
   {path: 'solde' , component: SoldeComponent},
   {path:'compte', component: CompteComponent},
   {path:'virement', component: VirementComponent},
-  {path:'discon', redirectTo:'/login',pathMatch:'full'},
   {path:'trans',component:TransactionComponent},
 ]}
 ];

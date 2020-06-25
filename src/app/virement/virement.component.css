@@ -1,14 +1,16 @@
 .bk{
-    background-color: white;
+    background:none;
     
 }
 .box{
     width: 500px;
     position: absolute;
-    top: 45%;
+    top: 40%;
     left: 40%;
     transform: translate(-50%,-50%);
     color:  rgb(17, 5, 71);
+    padding: 10px 20px;
+    height: 250px;
     
   }
   .form-control{
@@ -21,6 +23,7 @@
     float: left;
     margin: 10px;
     overflow: hidden;
+    margin: 15;
     -ms-overflow-style: none;
 
    }
