@@ -3,6 +3,8 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 import { Router } from '@angular/router';
+import { ClientdataService } from '../service/clientdata.service';
+
 
 @Component({
   selector: 'app-root-nav',
@@ -11,14 +13,13 @@ import { Router } from '@angular/router';
 
 })
 export class RootNavComponent {
-  Nom:string="zineb chacrone";
-  cin:string = "AL12345";
-  Datedenaissance:string ="31-01-1999";
-  numtel:string="0643434343";
-  email:string="chacrone.zineb@gmail.com";
-  numcompte:string="4787878787878787";
-  datedajout:string="08-04-2017";
+  Nom:string;
+  Prenom:string;
+  cin:string;
+  numtel:string;
+  email:string;
   position:string;
+  client:any;
 
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
@@ -27,10 +28,22 @@ export class RootNavComponent {
       shareReplay()
     );
 
-  constructor(private breakpointObserver: BreakpointObserver,private router: Router) {}
+  constructor(private breakpointObserver: BreakpointObserver,private router: Router,private client_data:ClientdataService) {}
   ngOnInit(): void {
     this.position=this.router.url;
+    this.client_data.goprofile().subscribe(data => {
     
+       this.client=data
+      
+       
+    },
+     error => console.log(error)
+    
+    )
+  
+
   }
+  
+  
 
 }

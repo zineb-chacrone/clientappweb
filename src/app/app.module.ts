@@ -26,6 +26,8 @@ import { ContactComponent } from './contact/contact.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+import { HttpClientModule } from '@angular/common/http';
+import { AuthserviceService } from './service/authservice.service';
 
 
 @NgModule({
@@ -40,7 +42,7 @@ import { MatSortModule } from '@angular/material/sort';
     VirementComponent,
     TransactionComponent,
     ContactComponent,
-   
+    
     
    
   ],
@@ -59,10 +61,13 @@ import { MatSortModule } from '@angular/material/sort';
     LayoutModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    HttpClientModule,
   ],
   
-  providers: [],
+  providers: [
+    AuthserviceService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
