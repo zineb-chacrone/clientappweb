@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ClientdataService } from '../service/clientdata.service';
 
 @Component({
   selector: 'app-compte',
@@ -10,30 +11,17 @@ export class CompteComponent implements OnInit {
 
   todayDate : Date = new Date();
   headers = ["Id", "N° du compte ","Type de compte","Montant","Etat"];
-  constructor(private route:Router,) { }
+  rows:any;
+  constructor(private route:Router,private client_data:ClientdataService) { }
 
   ngOnInit(): void {
+this.client_data.getComptes().subscribe(data => {
+  this.rows=data;
+})
+
   }
 
-  rows = [
-    {
-      "Id" : "1",
-      "N° du compte" : "2361498625362232",
-      "Type de compte" : "Etudiant",
-      "Montant" : "2000dhs",
-      
-      "Etat" : "Active",
-      
-    },
-    {
-      "Id" : "2",
-      "N° du compte" : "236149864612232",
-      "Type de compte" : "Personnel",
-      "Montant" : "5000dhs",
-      
-      "Etat" : "Active",
-    },
-  ]
+  
 }
 
 

@@ -19,9 +19,15 @@ export class AuthserviceService {
       )
       .pipe(
         map((userData) => {
+       
           sessionStorage.setItem('username', username);
           console.log(userData.role);
           sessionStorage.setItem('role', userData.role);
+          sessionStorage.setItem('cin', userData.cin);
+          sessionStorage.setItem('nom' , userData.nom);
+          sessionStorage.setItem('prenom',userData.prenom);
+          sessionStorage.setItem('phone',userData.phone);
+          sessionStorage.setItem('email', userData.email);
 
           let authString = 'Basic ' + btoa(username + ':' + password);
           sessionStorage.setItem('basicauth', authString);

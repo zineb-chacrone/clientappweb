@@ -33,13 +33,23 @@ export class RootNavComponent {
     this.position=this.router.url;
     this.client_data.goprofile().subscribe(data => {
     
-       this.client=data
+       this.client=data;
+    
       
        
     },
      error => console.log(error)
     
     )
+
+    this.Nom=sessionStorage.getItem('nom');
+    this.Prenom=sessionStorage.getItem('prenom');
+    this.cin=sessionStorage.getItem('cin');
+    this.numtel=sessionStorage.getItem('phone');
+    this.email=sessionStorage.getItem('email');
+    
+    
+    console.log(this.Nom);
   
 
   }
