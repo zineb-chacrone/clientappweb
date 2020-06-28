@@ -49,7 +49,7 @@ console.log(result);
         this.loginSuccess = false;
       });
 
-      this.http.get('http://localhost:8085/agents/search/findByUsername?username='+this.f.username.value)
+      this.http.get('http://localhost:8085/clients/search/findByUsername?username='+this.f.username.value)
       .subscribe(result=>{
         console.log(result)
       },error => {

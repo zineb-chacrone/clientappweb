@@ -23,7 +23,7 @@ return this.http.get("http://localhost:8085/client");
 }
 
 public getComptes(){
-  return this.http.get("http://localhost:8085/client/ListComptes")
+  return this.http.get("http://localhost:8085/client/ListComptes", {responseType: 'text'})
 }
   
 }

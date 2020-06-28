@@ -63,12 +63,28 @@
        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
            <div class="form-group">
             <i class="fas fa-user"></i>
-               <input type="text" formControlName="username" placeholder="Entrer Nom d'utilisateur" class="form-control" [ngClass]="{ 'is-invalid':f.username.errors }" />
-               <div *ngIf="f.username.errors" class="invalid-feedback">
+               <input type="text" formControlName="username" placeholder="Entrer Nom d'utilisateur" class="form-control" />
+             <!--  <div *ngIf="f.username.errors" class="invalid-feedback">
                       <div *ngIf="f.username.errors.required">Username is required</div>
-                </div>
+                </div>-->
            </div>
+           <div class="alert alert-warning" *ngIf='invalidLogin'>{{errorMessage}}</div>
+         <div class="alert alert-success" *ngIf='loginSuccess'>{{successMessage}}</div>
             <div class="form-group">
+                  <i class="fas fa-lock"></i>
+                <input type="password" formControlName="password" placeholder="Entrer Mot de passe" class="form-control"  />
+
+           </div>
+           <div class="form-group">
+                 <button  class="btn btn-primary" type="submit"  [disabled]="loginForm.invalid">
+                       <span class="spinner-border spinner-border-sm mr-1"></span>
+                             Se connecter
+                 </button>
+                 <a routerLink="/forgot" >Mot de passe Oublié  ?</a>
+           </div>
+
+          <!--
+                <div class="form-group">
                   <i class="fas fa-lock"></i>
                 <input type="password" formControlName="password" placeholder="Entrer Mot de passe" class="form-control" [ngClass]="{ 'is-invalid': f.password.errors }" />
                 <div *ngIf="f.password.errors" class="invalid-feedback">
@@ -82,6 +98,7 @@
                  </button>
                  <a routerLink="/forgot" >Mot de passe Oublié  ?</a>
            </div>
+          -->
        </form>
     </div>
 </body>

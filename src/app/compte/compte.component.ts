@@ -11,13 +11,16 @@ export class CompteComponent implements OnInit {
 
   todayDate : Date = new Date();
   headers = ["Id", "N° du compte ","Type de compte","Montant","Etat"];
-  rows:any;
+  rows:any=[];
   constructor(private route:Router,private client_data:ClientdataService) { }
 
   ngOnInit(): void {
-this.client_data.getComptes().subscribe(data => {
-  this.rows=data;
-})
+    this.client_data.getComptes()
+    .subscribe(data=>{
+      console.log(data)
+      this.rows=data;
+    })
+
 
   }
 
