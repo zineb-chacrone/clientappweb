@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { getLocaleDateFormat } from '@angular/common';
 import { lavender } from 'color-name';
 import { Compte } from '../compte.model';
+import {ClientdataService} from '../service/clientdata.service';
+import {FormGroup} from '@angular/forms';
 
 @Component({
   selector: 'app-solde',
@@ -9,18 +11,18 @@ import { Compte } from '../compte.model';
   styleUrls: ['./solde.component.css']
 })
 export class SoldeComponent implements OnInit {
-  acount: Compte[] =[
-    {id:4512345 , solde: '30000 Dh'},
-    {id:6758940 ,solde:'12300 Dh'},
-    {id:1945630 ,solde:'56300 Dh'}
-
-  ];
+  acount:any;
   compte: Compte;
   sold: string="";
   todayDate : Date = new Date();
-
+constructor(private data:ClientdataService) {
+}
   ngOnInit(): void {
-    
+    this.data.getComptes(localStorage.getItem('id'))
+      .subscribe(data=>{
+        this.acount=data;
+      })
+
   }
 
   showPrice(value)

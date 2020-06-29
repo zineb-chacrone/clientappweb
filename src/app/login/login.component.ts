@@ -4,6 +4,7 @@ import { from } from 'rxjs';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { AuthserviceService } from '../service/authservice.service';
 import { HttpClient } from '@angular/common/http';
+import {ClientdataService} from '../service/clientdata.service';
 
 @Component({
   selector: 'app-login',
@@ -18,9 +19,10 @@ errorMessage:'Invalid Credentials';
 successMessage:string;
 invalidLogin =false;
 loginSuccess = false;
-  
+  clientId;
+  clientCompt;
   constructor(private router: Router, private http:HttpClient,
-    private formBuilder: FormBuilder, 
+    private formBuilder: FormBuilder,private cAjout:ClientdataService,
     private route :ActivatedRoute,
     private authentificationService: AuthserviceService) { }
 
@@ -30,7 +32,7 @@ loginSuccess = false;
    password: ['',Validators.required]
 
  });}
- 
+
 get f(){
   return this.loginForm.controls;
 }
@@ -42,19 +44,20 @@ onSubmit(){
         this.invalidLogin = false;
         this.loginSuccess = true;
 console.log(result);
+this.clientId=result.id;
+this.cAjout.clientId=this.clientId;
+localStorage.setItem("id",this.clientId)
+        localStorage.setItem("client",result)
+console.log(this.clientId);
         this.successMessage = 'Login Successful.';
-        this.router.navigate(['/client']);
+
+        this.router.navigateByUrl("client");
       }, () => {
         this.invalidLogin = true;
         this.loginSuccess = false;
       });
 
-      this.http.get('http://localhost:8085/clients/search/findByUsername?username='+this.f.username.value)
-      .subscribe(result=>{
-        console.log(result)
-      },error => {
-        console.log(error)
-      })
+
 
 
     }
@@ -62,7 +65,7 @@ console.log(result);
 
 
 }
- 
+
 
 /*
   onClick(){
@@ -78,15 +81,15 @@ console.log(result);
      this.authentificationService.authenticate(this.f.username.value, this.f.password.value).subscribe((result)=> {
     this.invalidLogin = false;
     this.loginSuccess = true;
-    
+
     this.successMessage = 'Login Successful.';
     this.router.navigate(['/client']);
   }, () => {
     this.invalidLogin = true;
     this.loginSuccess = false;
-  }); 
-  
-     
+  });
+
+
   }
     gotoform(){
       this.router.navigate(['/inscription']);
@@ -94,4 +97,4 @@ console.log(result);
     gotoforgot(){
       this.router.navigate(['/forgot'])
     }*/
-  
+

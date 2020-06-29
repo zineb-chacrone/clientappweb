@@ -26,8 +26,9 @@ import { ContactComponent } from './contact/contact.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
-import { HttpClientModule } from '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import { AuthserviceService } from './service/authservice.service';
+import {HttpInterceptorService} from './http-interceptor.service';
 
 
 @NgModule({
@@ -42,9 +43,9 @@ import { AuthserviceService } from './service/authservice.service';
     VirementComponent,
     TransactionComponent,
     ContactComponent,
-    
-    
-   
+
+
+
   ],
 
   imports: [
@@ -64,9 +65,14 @@ import { AuthserviceService } from './service/authservice.service';
     MatSortModule,
     HttpClientModule,
   ],
-  
+
   providers: [
-    AuthserviceService
+    AuthserviceService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass:HttpInterceptorService,
+      multi: true
+    }
   ],
   bootstrap: [AppComponent]
 })

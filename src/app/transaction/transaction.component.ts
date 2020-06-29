@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ClientdataService} from '../service/clientdata.service';
 
 @Component({
   selector: 'app-transaction',
@@ -8,28 +9,18 @@ import { Component, OnInit } from '@angular/core';
 export class TransactionComponent implements OnInit {
 
   todayDate : Date = new Date();
-  headers = ["Date","Opération","Destinataire", "Montant"];
-  constructor() { }
+  rows;
+
+  headers = ["Opération","Numero Compte  du destinataire", "Montant"];
+  constructor(private data_client:ClientdataService) { }
 
   ngOnInit(): void {
+    this.data_client.getAllVirement(localStorage.getItem("id"))
+      .subscribe(data=>{
+        this.rows=data;
+      })
   }
 
-  rows = [
-    {
-      "Date" : "10-02-2020",
-      "Opération":"Virement",
-      "Destinataire" : "Sanae Alaoui",
-      "Montant":"3000dhs",
-      
-      
-     
-    },
-    {
-      "Date" : "25-12-2019",
-      "Opération":"Virement" ,
-      "Destinataire" : "Rania Mouali",
-      "Montant":"2000dh",
-    },
-  ]
+
 
 }

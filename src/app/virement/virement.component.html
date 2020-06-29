@@ -6,29 +6,44 @@
 <body class="bk">
         <div class="box">
     <h1>Virement Fomulaire</h1>
-    
-        <form >
+          <div class="form-group">
+            <!--<input  class="form-control" placeholder=" Numéro de compte d'emetteur" >
+            <label data-error="Champs Obligatoire!"></label>-->
+            <h2>
+               Numéro de compte d'emetteur:
+            </h2>
+            <select class="form-control" name="compte" id="compte" [(ngModel)]="comptemmet" (change)="showPrice($event.target.value)">
+              <option *ngFor="let cmp of acount._embedded.comptes" [value]="cmp.id" >
+                {{cmp.id}}
+              </option>
+            </select>
+
+          </div>
+
+
+        <form [formGroup]="formvirrment" (ngSubmit)="onVirer()" >
+          <div class="form-group">
+            <input  class="form-control" placeholder=" Operation" VALUE="Virement" disabled>
+            <label data-error="Champs Obligatoire!"></label>
+          </div>
             <div class="form-group">
-                <input  class="form-control" placeholder=" Numéro de compte du bénéficiaire" formControlName="numben" >
+                <input  class="form-control" placeholder=" Numéro de compte du bénéficiaire" formControlName="numcomptebenf" >
                 <label data-error="Champs Obligatoire!"></label>
             </div>
             <div class="form-group">
-                   
-                    <input class="form-control" placeholder=" Nom du bénéficiaire" formControlName="nomben" >
+
+                    <input class="form-control" placeholder=" Nom du bénéficiaire"  >
                     <label data-error="Champs Obligatoire!"></label>
             </div>
+
             <div class="form-group">
-                    <input  class="form-control" placeholder=" Numéro de compte d'emetteur" formControlName="numem">
-                    <label data-error="Champs Obligatoire!"></label>
-            </div>
-            <div class="form-group">
-                  
+
                     <input  class="form-control" placeholder="Montant" formControlName="montant">
                     <label data-error="Champs Obligatoire!"></label>
             </div>
-            <button type="submit" class="btn">Effectuer</button>
+            <button type="submit" class="btn" >Effectuer</button>
         </form>
     </div>
-   
+
 </body>
 </html>

@@ -1,29 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>nouveau Client</title>
+        <meta charset="UTF 8">
+    </head>
+
+    <body>
+
 <div class="comptes">
-   
+
     <h1>Mes Comptes</h1>
      <hr>
      <h4>
-         {{todayDate | date:'short'}} 
+         {{todayDate | date:'short'}}
      </h4>
-     
+
      <table id="cpts">
-         <tr>
-             <th *ngFor = "let column of headers">
-                 {{column}}
-     
-             </th>
-         </tr>
-     
-         <tr *ngFor = "let row of rows">
-             <td *ngFor = "let column of headers">
-               {{row[column]}}
-     
-             </td>
-            
-         </tr>
- 
-         
-        
+
+       <tr>
+         <th *ngFor = "let column of headers">
+           {{column}}
+
+         </th>
+       </tr>
+
+       <tr *ngFor = "let row of rows._embedded.comptes">
+         <td >
+{{row.id}}
+         </td>
+         <td >
+{{row.type}}
+         </td>
+         <td >
+           {{row.solde}}
+         </td>
+       </tr>
+
+
+
      </table>
-     
+
      </div>
+     </body>
+     </html>

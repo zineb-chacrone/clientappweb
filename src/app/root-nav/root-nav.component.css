@@ -4,14 +4,14 @@ h2{
   margin-top:50px;
   margin-left:-5px;
   font-size: 150%;
-  
- 
+
+
 }
 h3{
-  color:black;
   text-align: start ;
-  padding: 10px 20px;
   font-size: 150%;
+  color: darkblue;
+  margin: 5%;
 
 
 }
@@ -35,7 +35,7 @@ h3{
   padding:10px;
   height:400px;
   margin-top: 100px;
-  
+
 }
 .itm{
   color:goldenrod;
@@ -43,7 +43,7 @@ h3{
 }
 .itm:hover{
   color:black;
-  
+
 }
 .itm.selected{
   background:black;
@@ -68,7 +68,7 @@ h3{
 
 
 .sidenav {
-  
+
   width: 230px;
   background:black;
 }
@@ -88,9 +88,10 @@ h3{
   left: 20%;
   height: auto;
   width:79%;
-  border:5px goldenrod solid;
+  border:4px solid goldenrod;
 
-      
+
+
 }
 .imageedit{
   max-width: 100%;
@@ -98,9 +99,10 @@ h3{
   width: 400px;
 }
 .image1{
-  top: 40%;
+  top: 20%;
   float: right;
   margin-left: 10%;
   margin-top: 5%;
   margin-right: 5%;
+  margin-bottom: 5%;
 }

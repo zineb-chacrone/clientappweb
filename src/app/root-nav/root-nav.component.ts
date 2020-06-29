@@ -19,8 +19,8 @@ export class RootNavComponent {
   numtel:string;
   email:string;
   position:string;
-  client:any;
-
+  clientId:any;
+  client;
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
@@ -31,29 +31,20 @@ export class RootNavComponent {
   constructor(private breakpointObserver: BreakpointObserver,private router: Router,private client_data:ClientdataService) {}
   ngOnInit(): void {
     this.position=this.router.url;
-    this.client_data.goprofile().subscribe(data => {
-    
-       this.client=data;
-    
-      
-       
-    },
-     error => console.log(error)
-    
-    )
 
-    this.Nom=sessionStorage.getItem('nom');
-    this.Prenom=sessionStorage.getItem('prenom');
-    this.cin=sessionStorage.getItem('cin');
-    this.numtel=sessionStorage.getItem('phone');
-    this.email=sessionStorage.getItem('email');
-    
-    
-    console.log(this.Nom);
-  
+this.client_data.goprofile(localStorage.getItem('id'))
+  .subscribe(data=>{
+    this.client=data
+    console.log(data)
+  })
+
+
+
+
+
 
   }
-  
-  
+
+
 
 }

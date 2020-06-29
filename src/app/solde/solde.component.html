@@ -8,15 +8,15 @@
 
 <body class="bg">
 <div class="box">
- 
+
     <div class="form-group">
         <!--date du jour-->
         <h1>
         <p>
-              Le:  {{todayDate | date:'short'}} 
+              Le:  {{todayDate | date:'short'}}
         </p>
         </h1>
-    </div>   
+    </div>
     <div class="select">
       <label>
         <h3>
@@ -25,9 +25,9 @@
       </label>
 
         <select name="compte" id="compte" [(ngModel)]="compte" (change)="showPrice($event.target.value)">
-            <option *ngFor="let cmp of acount" [value]="cmp.solde" >
+            <option *ngFor="let cmp of acount._embedded.comptes" [value]="cmp.solde" >
                 {{cmp.id}}
-            </option>    
+            </option>
           </select>
     </div>
     <div><br />
@@ -35,8 +35,8 @@
         le solde de votre compte est : {{sold}}
       </h2>
     </div>
-    
-    
-  </div> 
+
+
+  </div>
 </body>
 </html>

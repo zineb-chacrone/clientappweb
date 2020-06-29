@@ -12,28 +12,34 @@
         </a>
     </div>
     -->
-   
+
     <table id="customer">
-        
+
         <tr>
             <th *ngFor = "let column of headers">
                 {{column}}
-    
+
             </th>
         </tr>
-    
-        <tr *ngFor = "let row of rows">
-            <td *ngFor = "let column of headers">
-              {{row[column]}}
-    
+
+        <tr *ngFor = "let row of rows._embedded.virements">
+            <td>
+             Virement
+
             </td>
-            
+          <td>
+{{row.numcomptebenf}}
+          </td>
+          <td>
+            {{row.montant}}
+          </td>
+
         </tr>
-        
+
     </table>
-    
-    
-    
+
+
+
     </div>
 
 
