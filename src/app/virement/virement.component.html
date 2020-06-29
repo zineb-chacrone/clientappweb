@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Virement Formu</title>
+        <title>Virement Formulaire</title>
     </head>
 <body class="bk">
         <div class="box">
     <h1>Virement Fomulaire</h1>
+    <br />
+    <br />
           <div class="form-group">
             <!--<input  class="form-control" placeholder=" Numéro de compte d'emetteur" >
             <label data-error="Champs Obligatoire!"></label>-->
-            <h2>
+            <h4>
                Numéro de compte d'emetteur:
-            </h2>
-            <select class="form-control" name="compte" id="compte" [(ngModel)]="comptemmet" (change)="showPrice($event.target.value)">
+            </h4>
+            <select class="form-control" name="compte" id="compte" [(ngModel)]="comptemmet" (change)="showPrice($event.target.value)" placeholder="Numéro de compte d'emetteur">
               <option *ngFor="let cmp of acount._embedded.comptes" [value]="cmp.id" >
                 {{cmp.id}}
               </option>

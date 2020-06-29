@@ -133,10 +133,10 @@ h2{
     background: none;
     color:  rgb(17, 5, 71);
     font-size: 15px;
-    width: 55%;
+    width: 70%;
     height: 30px;
     margin-top: 50px;
-    margin-left: 100px;
+    margin-left: 70px;
 }
 .form-group i{
     color: goldenrod;
@@ -145,15 +145,15 @@ h2{
 
 .form-group button{
    padding: 10px;
-   width: 20%;
-   margin-top: 100px;
+   width: 25%;
+   margin-top: 90px;
    margin-left: 20px;
-   background-color: white;
+   background-color: rgb(253, 250, 250);
    color: goldenrod;
 }
 
 .form-group a{
     float: right;
-    margin-top: 80px;
+    margin-top: 60px;
 }
 

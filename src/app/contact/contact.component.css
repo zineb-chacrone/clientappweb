@@ -1,12 +1,6 @@
-body{
-  padding: 0px;
-  margin: 0px;  
-  font-family: sans-serif;
-
- }   
-.mlina{
-  position: relative;
-margin-top: 10%;
+ 
+.center{
+  margin-left:0px;
 
 }
 
@@ -23,71 +17,23 @@ margin-top: 10%;
   /* contact form css */
 
 
-  #contact-section{
-
+   .container h2{
     
-    background-position: center;
-    height: 100%;
-    width: 100% ;
-    padding-bottom: 2%;
-  }
-
-  #contact-section .container h2{
-    text-align: center;
      text-decoration: underline;
       /* text-decoration-color:red; */
       text-underline-position: under;
       color: goldenrod;
       letter-spacing: 2px;
       font-size: 250%;
-      margin-top: 30px;
+      margin-top: 100px;
       
   }
 
   
 
-  #contact-section .container p{
-    text-align: center; 
-    width: 70%; 
-    margin-left: auto;
-     margin-right: auto; 
-     padding-bottom: 3%;
-     color: black;
-     letter-spacing:3px;
-     font-size: 150%;
-  }
-
-  .contact-form i.fa{
-    /* color: red; */
-    /* color: #fff; */
-    font-size: 22px; 
-    padding: 3%;
-    background-color: none;
-    border-radius: 80%;
-    margin: 2%;
-    /* border: 2px solid #fff; */
-    cursor: pointer;
-    border:2px solid goldenrod;
-    color: goldenrod;
-    left:0;
-   
   
-  }
-  .icon{
-      margin: 10px;
-      top:40%;
-  }
   
-  .contact-form i.fa:hover{
-    cursor: pointer;
-    border:2px solid white;
-    color: black;
-  }
-   
-    .contact-form{
-      display: grid;
-      grid-template-columns: auto auto;
-       }
+  
     
     .form-info{
       font-size: 16px;
@@ -100,6 +46,7 @@ margin-top: 10%;
       padding: 10px;
       margin:10px;
       width: 70%;
+     
       background-color:white;
       color: black;
       border: 1px solid;
@@ -154,9 +101,9 @@ margin-top: 10%;
   @media (max-width: 768px){
 
 #contact-section .contact-form{
-      display: block;
+      
       width: 100%;
-      text-align: center;
+      
     }
     #contact-section .btn{
 
