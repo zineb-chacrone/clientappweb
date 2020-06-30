@@ -3,7 +3,7 @@ h2{
   color:goldenrod;
   margin-top:50px;
   margin-left:-5px;
-  font-size: 150%;
+  font-size: 170%;
 
 
 }
@@ -31,22 +31,22 @@ h3{
 }
 .listXd{
   background-color:rgba(0, 0, 0, 0.829);
-  color: goldenrod;
+  color: rgb(206, 166, 65);
   padding:10px;
   height:400px;
   margin-top: 100px;
 
 }
 .itm{
-  color:goldenrod;
-  font-size: 100%;
+  color:rgb(230, 198, 118);
+  font-size: 110%;
 }
 .itm:hover{
-  color:black;
+  color:gray;
 
 }
 .itm.selected{
-  background:black;
+  background:gray;
 }
 
 .itm::before{
@@ -87,7 +87,7 @@ h3{
   top: 26%;
   left: 20%;
   height: auto;
-  width:79%;
+  width:70%;
   border:4px solid goldenrod;
 
 
@@ -106,3 +106,11 @@ h3{
   margin-right: 5%;
   margin-bottom: 5%;
 }
+
+
+.bg{
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+

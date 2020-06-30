@@ -1,104 +1,32 @@
-<!--
-  
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>S'authentifier</title>
-        <meta charset="UTF 8">
-    </head>
+
 
 <body class="bg">
 
-    <div class="left"><i class="fas fa-coins">EMBank</i></div>
-    <div class="right">
+<div class="left"><i class="fas fa-coins"></i>EMBank</div>
+<div class="right">
 
-    <div class="pt-2">
-            <li  >
-                <a class="btnvv" (click)="gotoform()">New to internet banking ?</a>
-             </li>
+  <h2>Log In</h2>
+
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+
+      <input type="text" formControlName="username" placeholder="Entrer Nom d'utilisateur" class="form-control" />
+
     </div>
-    
-        <div class="textbox">
-            <i class="fas fa-user"></i>
-                        <input type="text"  placeholder="user name" [(ngModel)]="compte" name="" value="">
-        </div>
-    
-        <div class="textbox">
-            <i class="fas fa-lock"></i>
-            <input type="password" placeholder="Password" [(ngModel)]="password" name="" value="">
-        </div>
-    
-        <div>
-            <button class="btn" type="submit" (click)="onClick()" name="" value="se connecter" routerLinkActive="active">
-                 <a  class="btnvv">Sign in</a>
-            </button>
-        </div>
-       
-      
-        <div class="form-row d-flex flex-row justify-content-between">
-            <div class="col align-self-end">
-              <span class="float-right pb-2">
-                <a class=" btnvv" (click)="gotoforgot()">
-                  Forgot Password?
-                </a>
-              </span>
-            </div>
-          </div>
-        <p  class="message" [(ngModel)]="msg" >
-                {{ msg }}
-        </p>
+    <div class="alert alert-warning" *ngIf='invalidLogin'>{{errorMessage}}</div>
+    <div class="alert alert-success" *ngIf='loginSuccess'>{{successMessage}}</div>
+    <div class="form-group">
+
+      <input type="password" formControlName="password" placeholder="Entrer Mot de passe" class="form-control"  />
+
     </div>
-    
-</body>
-</html>
--->
+    <div class="form-group">
+      <button mat-raised-button class="btn btn-primary" type="submit"  [disabled]="loginForm.invalid">
 
-<body class="bg">
-
-    <div class="left"><i class="fas fa-coins"></i>EMBank</div>
-    <div class="right">
-
-       <h2>Login</h2>
-    
-       <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-           <div class="form-group">
-            <i class="fas fa-user"></i>
-               <input type="text" formControlName="username" placeholder="Entrer Nom d'utilisateur" class="form-control" />
-             <!--  <div *ngIf="f.username.errors" class="invalid-feedback">
-                      <div *ngIf="f.username.errors.required">Username is required</div>
-                </div>-->
-           </div>
-           <div class="alert alert-warning" *ngIf='invalidLogin'>{{errorMessage}}</div>
-         <div class="alert alert-success" *ngIf='loginSuccess'>{{successMessage}}</div>
-            <div class="form-group">
-                  <i class="fas fa-lock"></i>
-                <input type="password" formControlName="password" placeholder="Entrer Mot de passe" class="form-control"  />
-
-           </div>
-           <div class="form-group">
-                 <button  class="btn btn-primary" type="submit"  [disabled]="loginForm.invalid">
-                       <span class="spinner-border spinner-border-sm mr-1"></span>
-                             Se connecter
-                 </button>
-                 <a routerLink="/forgot" >Mot de passe Oublié  ?</a>
-           </div>
-
-          <!--
-                <div class="form-group">
-                  <i class="fas fa-lock"></i>
-                <input type="password" formControlName="password" placeholder="Entrer Mot de passe" class="form-control" [ngClass]="{ 'is-invalid': f.password.errors }" />
-                <div *ngIf="f.password.errors" class="invalid-feedback">
-                      <div *ngIf="f.password.errors.required">Password is required</div>
-                </div>
-           </div>
-           <div class="form-group">
-                 <button  class="btn btn-primary"  [disabled]="loginForm.invalid">
-                       <span class="spinner-border spinner-border-sm mr-1"></span>
-                             Se connecter
-                 </button>
-                 <a routerLink="/forgot" >Mot de passe Oublié  ?</a>
-           </div>
-          -->
-       </form>
+        Se connecter
+      </button>
+      <a routerLink="/forgot" >Mot de passe Oublié  ?</a>
     </div>
+  </form>
+</div>
 </body>

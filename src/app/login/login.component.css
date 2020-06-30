@@ -1,6 +1,6 @@
 /*
 .login-box{
-    
+
     width: 500px;
     height: 450px;
     position: absolute;
@@ -8,7 +8,7 @@
     left:17%;
     transform: translate(-50%,-50%);
     padding: 50px 60px;
-    
+
 }
 
 
@@ -48,7 +48,7 @@
 .message{
 
     color: red;
-    
+
 }
 
 
@@ -93,67 +93,67 @@
 }
 */
 .bg{
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .left{
-    float:right;
-    margin-right:15%;
-    margin-top:18%;
-    font-size: 100px;
-    color:goldenrod;
+  float:right;
+  margin-right:15%;
+  margin-top:18%;
+  font-size: 100px;
+  color:goldenrod;
 }
 .right{
-    width: 500px;
-    height: 600px;
-    position: absolute;
-    top: 45%;
-    left:25%;
-    transform: translate(-50%,-50%);
-    padding: 20px 20px;
-    border:5px solid goldenrod;
+  width: 500px;
+  height: 600px;
+  position: absolute;
+  top: 45%;
+  left:25%;
+  transform: translate(-50%,-50%);
+  padding: 20px 20px;
+  border:5px solid goldenrod;
 
 }
 h2{
-    font-size: 250%;
-    margin-left:40%;
-    margin-top: 10%;
-    color: goldenrod;
-    padding: 10px;
+  font-size: 250%;
+  margin-left:40%;
+  margin-top: 10%;
+  color: goldenrod;
+  padding: 10px;
 }
 
 .form-group{
-    padding: 10px 10px;
-    
+  padding: 10px 10px;
+
 }
 
 .form-group input{
-   border-bottom: 1px solid;
-    outline: none;
-    background: none;
-    color:  rgb(17, 5, 71);
-    font-size: 15px;
-    width: 55%;
-    height: 30px;
-    margin-top: 50px;
-    margin-left: 100px;
+  border-bottom: 1px solid;
+  outline: none;
+  background: none;
+  color:  rgb(17, 5, 71);
+  font-size: 15px;
+  width: 70%;
+  height: 30px;
+  margin-top: 50px;
+  margin-left: 70px;
 }
 .form-group i{
-    color: goldenrod;
-    font-size: 40px;
+  color: goldenrod;
+  font-size: 40px;
 }
 
 .form-group button{
-   padding: 10px;
-   width: 20%;
-   margin-top: 100px;
-   margin-left: 20px;
-   background-color: white;
-   color: goldenrod;
+  padding: 10px;
+  width: 25%;
+  margin-top: 90px;
+  margin-left: 20px;
+  background-color: rgb(253, 250, 250);
+  color: goldenrod;
 }
 
 .form-group a{
-    float: right;
-    margin-top: 80px;
+  float: right;
+  margin-top: 60px;
 }
 
